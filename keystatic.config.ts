@@ -58,9 +58,9 @@ function getHorseInput(label: string) {
 
 export default config({
     storage: {
-        kind: 'local',
-        // kind: 'github',
-        // repo: 'olsenkraja/edle-pferde-astro'
+        // kind: 'local',
+        kind: 'github',
+        repo: 'olsenkraja/edle-pferde-astro'
     },
     ui: {
         brand: {
