@@ -1,9 +1,8 @@
-import {getCollection} from "astro:content"
+import {getCollection, getEntry} from "astro:content"
 
 export const GET = async ({params}) => {
     const {collection, slug} = params;
-    const items = await getCollection(collection)
-    const item = items.find(i => i.slug === slug)
+    const item = await getEntry(collection, slug)
 
     return new Response(JSON.stringify(item), {
         headers: {
